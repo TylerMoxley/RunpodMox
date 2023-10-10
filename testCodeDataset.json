@@ -1,0 +1,77 @@
+[
+    {
+        "base code": "def greet(name):\n    return f'Hello, {name}'",
+        "updates requested": "Add a title parameter with default value 'Mr.' and include it in the greeting.",
+        "model response": "def greet(name, title='Mr.'):\n    return f'Hello, {title} {name}'"
+    },
+    {
+        "base code": "def area(radius):\n    return 3.14 * radius * radius",
+        "updates requested": "Use the math module to get the value of pi.",
+        "model response": "import math\ndef area(radius):\n    return math.pi * radius * radius"
+    },
+    {
+        "base code": "def factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n-1)",
+        "updates requested": "Handle negative values by returning None.",
+        "model response": "def factorial(n):\n    if n < 0:\n        return None\n    if n == 0:\n        return 1\n    return n * factorial(n-1)"
+    },
+    {
+        "base code": "def divide(x, y):\n    return x / y",
+        "updates requested": "Handle division by zero by returning 'Cannot divide by zero'.",
+        "model response": "def divide(x, y):\n    if y == 0:\n        return 'Cannot divide by zero'\n    return x / y"
+    },
+    {
+        "base code": "def list_sum(lst):\n    sum = 0\n    for item in lst:\n        sum += item\n    return sum",
+        "updates requested": "Use Python's built-in sum function.",
+        "model response": "def list_sum(lst):\n    return sum(lst)"
+    },
+    {
+        "base code": "def square(n):\n    return n * n",
+        "updates requested": "Rename the function to `calculate_square`.",
+        "model response": "def calculate_square(n):\n    return n * n"
+    },
+    {
+        "base code": "def append_data(data, item):\n    data.append(item)\n    return data",
+        "updates requested": "Return a new list without modifying the input list.",
+        "model response": "def append_data(data, item):\n    return data + [item]"
+    },
+    {
+        "base code": "def find_max(data):\n    return max(data)",
+        "updates requested": "Handle an empty list by returning None.",
+        "model response": "def find_max(data):\n    if not data:\n        return None\n    return max(data)"
+    },
+    {
+        "base code": "def calculate_age(year_of_birth):\n    return 2023 - year_of_birth",
+        "updates requested": "Make the current year dynamic using datetime module.",
+        "model response": "import datetime\ndef calculate_age(year_of_birth):\n    current_year = datetime.datetime.now().year\n    return current_year - year_of_birth"
+    },
+    {
+        "base code": "def reverse_string(s):\n    return ''.join(reversed(s))",
+        "updates requested": "Use Python's slice notation to reverse the string.",
+        "model response": "def reverse_string(s):\n    return s[::-1]"
+    },
+    {
+        "base code": "def is_even(n):\n    if n % 2 == 0:\n        return True\n    else:\n        return False",
+        "updates requested": "Simplify the function.",
+        "model response": "def is_even(n):\n    return n % 2 == 0"
+    },
+    {
+        "base code": "def convert_to_upper(s):\n    return str.upper(s)",
+        "updates requested": "Use the string method directly.",
+        "model response": "def convert_to_upper(s):\n    return s.upper()"
+    },
+    {
+        "base code": "def filter_data(data):\n    return list(filter(lambda x: x > 10, data))",
+        "updates requested": "Use a list comprehension instead of filter.",
+        "model response": "def filter_data(data):\n    return [x for x in data if x > 10]"
+    },
+    {
+        "base code": "def get_extension(filename):\n    return filename.split('.')[-1]",
+        "updates requested": "Use Python's os.path module to get the file extension.",
+        "model response": "import os\ndef get_extension(filename):\n    return os.path.splitext(filename)[1][1:]"
+    },
+    {
+        "base code": "def concat_strings(s1, s2):\n    return s1 + ' ' + s2",
+        "updates requested": "Allow the function to concatenate more than two strings.",
+        "model response": "def concat_strings(*args):\n    return ' '.join(args)"
+    }
+]
